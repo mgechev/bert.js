@@ -1,6 +1,6 @@
 # BERT
 
-Based on https://github.com/znull/node-bertrpc
+Based on https://github.com/rustyio/BERT-JS
 
 # License
 
