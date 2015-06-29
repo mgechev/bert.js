@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "BERT for client-side JavaScript",
   "main": "dist/index.js",
+  "repository": "git@github.com:mgechev/bertjs.git",
+  "readMe": "README.markdown",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Minko Gechev <mgechev@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
