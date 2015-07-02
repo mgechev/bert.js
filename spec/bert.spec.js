@@ -60,7 +60,7 @@ describe('Bert', function () {
   it('should not encode undefined', function () {
     expect(function () {
       Bert.binary_to_list(Bert.encode(undefined))
-    }).toRaise("Cannot encode undefined values.");
+    }).toThrow("Cannot encode undefined values.");
   });
 
   it('should encode floats', function () {
