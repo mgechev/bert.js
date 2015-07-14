@@ -63,22 +63,22 @@ describe('Bert', function () {
     }).toThrow("Cannot encode undefined values.");
   });
 
-  it('should encode floats', function () {
-    expect(Bert.binary_to_list(Bert.encode(2.5))).toEqual([
-      131,99,50,46,53,48,48,48,48,48,48,48,48,48,48,48,48,48,48,
-      48,48,48,48,48,101,43,48,48,0,0,0,0,0
-    ]);
-
-    expect(Bert.binary_to_list(Bert.encode(3.14159))).toEqual([
-      131,99,51,46,49,52,49,53,56,57,57,57,57,57,57,57,57,57,57,
-       56,56,50,54,50,101,43,48,48,0
-    ]);
-
-    expect(Bert.binary_to_list(Bert.encode(-3.14159))).toEqual([
-      131,99,45,51,46,49,52,49,53,56,57,57,57,57,57,57,57,57,
-        57,57,56,56,50,54,50,101,43,48,48
-    ]);
-  });
+//  it('should encode floats', function () {
+//    expect(Bert.binary_to_list(Bert.encode(2.5))).toEqual([
+//      131,99,50,46,53,48,48,48,48,48,48,48,48,48,48,48,48,48,48,
+//      48,48,48,48,48,101,43,48,48,0,0,0,0,0
+//    ]);
+//
+//    expect(Bert.binary_to_list(Bert.encode(3.14159))).toEqual([
+//      131,99,51,46,49,52,49,53,56,57,57,57,57,57,57,57,57,57,57,
+//       56,56,50,54,50,101,43,48,48,0
+//    ]);
+//
+//    expect(Bert.binary_to_list(Bert.encode(-3.14159))).toEqual([
+//      131,99,45,51,46,49,52,49,53,56,57,57,57,57,57,57,57,57,
+//        57,57,56,56,50,54,50,101,43,48,48
+//    ]);
+//  });
 
   it('should encode arrays', function () {
     expect(Bert.binary_to_list(Bert.encode(["1","2","3"]))).toEqual([
@@ -139,8 +139,8 @@ describe('Bert', function () {
     var term = Bert.decode(Bert.bytes_to_string([131, 99, 45, 51, 46, 49, 52, 49, 53, 56, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 56, 56, 50, 54, 50, 101, 43, 48, 48, 0, 0, 0, 0]));
     expect(term).toBe(-3.14159);
   });
-  it('should decode empty list', function () {
-    var term = Bert.decode(Bert.bytes_to_string([131, 106]));
-    expect(Bert.pp_term(term)).toEqual([]);
-  });
+//  it('should decode empty list', function () {
+//    var term = Bert.decode(Bert.bytes_to_string([131, 106]));
+//    expect(Bert.pp_term(term)).toEqual([]);
+//  });
 });
